@@ -1,5 +1,4 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.gradle.jvm.toolchain.JavaLanguageVersion
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
@@ -23,6 +22,9 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation("io.javalin:javalin:6.5.0")
     implementation("org.slf4j:slf4j-simple:2.0.7")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.18.+")
+    implementation(kotlin("stdlib"))
+    implementation("io.github.microutils:kotlin-logging:3.0.5")
 }
 
 tasks.test {
