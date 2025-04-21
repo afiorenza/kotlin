@@ -1,7 +1,7 @@
-package server
+package com.server
 
+import com.server.controllers.UsersController
 import io.javalin.Javalin
-import server.controllers.UsersController
 
 fun main(args: Array<String>) {
     val usersController = UsersController()

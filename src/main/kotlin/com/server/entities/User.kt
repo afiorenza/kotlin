@@ -1,4 +1,4 @@
-package server.entities
+package com.server.entities
 
 import java.util.*
 

@@ -1,8 +1,8 @@
-package server.repositories
+package com.server.repositories
 
+import com.server.entities.User
 import io.javalin.http.NotFoundResponse
 import io.javalin.http.NotModifiedResponse
-import server.entities.User
 
 class UsersRepository {
     companion object {

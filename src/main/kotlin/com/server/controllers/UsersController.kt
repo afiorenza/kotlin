@@ -1,10 +1,10 @@
-package server.controllers
+package com.server.controllers
 
+import com.server.entities.User
+import com.server.repositories.UsersRepository
 import io.javalin.apibuilder.ApiBuilder.*
 import io.javalin.http.NotFoundResponse
 import io.javalin.http.bodyAsClass
-import server.entities.User
-import server.repositories.UsersRepository
 
 class UsersController {
     val userRepository = UsersRepository()
