@@ -1,10 +1,8 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 group = "org.example"
 version = "1.0-SNAPSHOT"
 
 plugins {
-    kotlin("jvm") version "1.9.22"
+    kotlin("jvm") version "2.0.20"
     application
     id("com.gradleup.shadow") version "8.3.3"
 }
@@ -25,7 +23,11 @@ dependencies {
     implementation("org.slf4j:slf4j-simple:2.0.7")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.18.+")
     implementation("io.github.microutils:kotlin-logging:3.0.5")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.23") // Ver si no es lo mismo que la linea 26
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.20")
+    implementation("org.postgresql:postgresql:42.7.4")
+    implementation("org.jetbrains.exposed:exposed-core:0.60.0")
+    implementation("org.jetbrains.exposed:exposed-jdbc:0.60.0")
+    implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
 }
 
 application {
@@ -34,10 +36,6 @@ application {
 
 tasks.test {
     useJUnitPlatform()
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "21"
 }
 
 tasks.withType<Jar> {
